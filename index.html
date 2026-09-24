@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small gallery celebrating Quagsire through official artwork and trading cards.">
+  <title>Quagsire Gallery</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17324a;
+      --muted: #526a7c;
+      --water: #89d1e8;
+      --deep-water: #2f83a3;
+      --cream: #fff9df;
+      --card: rgba(255, 255, 255, 0.82);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(255,255,255,.9) 0 6rem, transparent 6.1rem),
+        radial-gradient(circle at 88% 20%, rgba(255,249,223,.75) 0 10rem, transparent 10.1rem),
+        linear-gradient(160deg, #dff7ff 0%, #a9e1ef 46%, #fdf3c8 100%);
+      font-family: ui-rounded, "SF Pro Rounded", "Avenir Next", system-ui, sans-serif;
+    }
+
+    a { color: inherit; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(220px, .85fr);
+      gap: 2rem;
+      align-items: center;
+      width: min(1120px, calc(100% - 2rem));
+      margin: 1rem auto 0;
+      padding: clamp(2rem, 6vw, 5rem);
+      border: 2px solid rgba(255,255,255,.72);
+      border-radius: 2rem;
+      background: rgba(255,255,255,.36);
+      box-shadow: 0 30px 80px rgba(27, 91, 114, .18);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      border: 2px solid rgba(47, 131, 163, .15);
+    }
+
+    .hero::before { width: 18rem; height: 18rem; left: -8rem; bottom: -11rem; }
+    .hero::after { width: 12rem; height: 12rem; right: -5rem; top: -6rem; }
+
+    .eyebrow {
+      margin: 0 0 .6rem;
+      color: var(--deep-water);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3.5rem, 10vw, 7.5rem);
+      line-height: .88;
+      letter-spacing: -.075em;
+    }
+
+    .intro {
+      max-width: 34rem;
+      margin: 1.35rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.22rem);
+      line-height: 1.65;
+    }
+
+    .hero-art {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 360px);
+      margin-inline: auto;
+      filter: drop-shadow(0 1.25rem 1rem rgba(26, 84, 109, .2));
+      animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-1deg); }
+      50% { transform: translateY(-12px) rotate(1deg); }
+    }
+
+    main {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 4rem auto;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: -.05em;
+    }
+
+    .count {
+      margin: 0 0 .35rem;
+      color: var(--muted);
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    figure {
+      margin: 0;
+      padding: .7rem;
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 1.35rem;
+      background: var(--card);
+      box-shadow: 0 14px 34px rgba(28, 85, 106, .12);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    figure:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 42px rgba(28, 85, 106, .2);
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 733 / 1024;
+      object-fit: contain;
+      border-radius: .9rem;
+      background: linear-gradient(145deg, #dff6fb, #fff8d9);
+    }
+
+    figcaption {
+      min-height: 4.1em;
+      padding: .85rem .35rem .3rem;
+      font-size: .88rem;
+      font-weight: 700;
+      line-height: 1.42;
+    }
+
+    footer {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto 1rem;
+      padding: 1.4rem 1.6rem;
+      border-radius: 1.25rem;
+      color: var(--muted);
+      background: rgba(255,255,255,.55);
+      font-size: .82rem;
+      line-height: 1.6;
+    }
+
+    footer p { margin: 0; }
+
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .intro { margin-inline: auto; }
+      .hero-art { width: min(70%, 280px); grid-row: 1; }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+      .hero-art { animation: none; }
+      figure { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">No. 0195 · Water Fish Pokémon</p>
+      <h1>Quagsire</h1>
+      <p class="intro">A quiet little archive for the happiest face in the marsh—one official portrait and twenty-six cards from across the years.</p>
+    </div>
+    <img class="hero-art" src="assets/quagsire/quagsire-official.webp" alt="Official artwork of Quagsire" width="200" height="200">
+  </header>
+
+  <main>
+    <div class="section-head">
+      <h2>Card gallery</h2>
+      <p class="count">26 cards · TCG + Pocket</p>
+    </div>
+
+    <section class="gallery" aria-label="Quagsire card gallery">
+      <figure><img src="assets/quagsire/card-01.webp" alt="Quagsire 122/SV-P card" loading="lazy"><figcaption>Quagsire 122/SV-P · Scarlet &amp; Violet Promos</figcaption></figure>
+      <figure><img src="assets/quagsire/card-02.webp" alt="Quagsire V 311/S-P card" loading="lazy"><figcaption>Quagsire V 311/S-P · Sword &amp; Shield Promos</figcaption></figure>
+      <figure><img src="assets/quagsire/card-03.webp" alt="Quagsire 035/076 card" loading="lazy"><figcaption>Quagsire 035/076 · Legendary Heartbeat</figcaption></figure>
+      <figure><img src="assets/quagsire/card-04.webp" alt="Quagsire 022/055 card" loading="lazy"><figcaption>Quagsire 022/055 · Night Unison</figcaption></figure>
+      <figure><img src="assets/quagsire/card-05.webp" alt="Quagsire 004/035 card" loading="lazy"><figcaption>Quagsire 004/035 · Premium Trainer Box</figcaption></figure>
+      <figure><img src="assets/quagsire/card-06.webp" alt="Quagsire 009/038 card" loading="lazy"><figcaption>Quagsire 009/038 · Starter Set GX</figcaption></figure>
+      <figure><img src="assets/quagsire/card-07.webp" alt="Quagsire 024/150 card" loading="lazy"><figcaption>Quagsire 024/150 · GX Ultra Shiny</figcaption></figure>
+      <figure><img src="assets/quagsire/card-08.webp" alt="Quagsire 170/150 card" loading="lazy"><figcaption>Quagsire 170/150 · GX Ultra Shiny</figcaption></figure>
+      <figure><img src="assets/quagsire/card-09.webp" alt="Quagsire 019/053 card" loading="lazy"><figcaption>Quagsire 019/053 · Dragon Storm</figcaption></figure>
+      <figure><img src="assets/quagsire/card-10.webp" alt="Quagsire 039/081 card" loading="lazy"><figcaption>Quagsire 039/081 · Bandit Ring</figcaption></figure>
+      <figure><img src="assets/quagsire/card-11.webp" alt="Quagsire 011/051 card" loading="lazy"><figcaption>Quagsire 011/051 · Thunder Knuckle</figcaption></figure>
+      <figure><img src="assets/quagsire/card-12.webp" alt="Quagsire 027/070 card" loading="lazy"><figcaption>Quagsire 027/070 · SoulSilver Collection</figcaption></figure>
+      <figure><img src="assets/quagsire/card-13.webp" alt="Quagsire GL 015/090 card" loading="lazy"><figcaption>Quagsire GL 015/090 · Bonds to the End of Time</figcaption></figure>
+      <figure><img src="assets/quagsire/card-14.webp" alt="Quagsire DPBP 224 card" loading="lazy"><figcaption>Quagsire DPBP#224 · Shining Darkness</figcaption></figure>
+      <figure><img src="assets/quagsire/card-15.webp" alt="Quagsire 006/068 card" loading="lazy"><figcaption>Quagsire 006/068 · Offense and Defense</figcaption></figure>
+      <figure><img src="assets/quagsire/card-16.webp" alt="Quagsire 006/016 card" loading="lazy"><figcaption>Quagsire 006/016 · Typhlosion Starter Deck</figcaption></figure>
+      <figure><img src="assets/quagsire/card-17.webp" alt="Quagsire 027/084 card" loading="lazy"><figcaption>Quagsire 027/084 · Rocket Gang Strikes Back</figcaption></figure>
+      <figure><img src="assets/quagsire/card-18.webp" alt="Quagsire 029/092 card" loading="lazy"><figcaption>Quagsire 029/092 · The Town on No Map</figcaption></figure>
+      <figure><img src="assets/quagsire/card-19.webp" alt="Misty's Quagsire 058/141 card" loading="lazy"><figcaption>Misty’s Quagsire 058/141 · Pokémon Card ★ VS</figcaption></figure>
+      <figure><img src="assets/quagsire/card-20.webp" alt="Quagsire Awakening Legends card" loading="lazy"><figcaption>Quagsire · Awakening Legends</figcaption></figure>
+      <figure><img src="assets/quagsire/card-21.webp" alt="Quagsire Gold Silver to a New World card" loading="lazy"><figcaption>Quagsire · Gold, Silver, to a New World…</figcaption></figure>
+      <figure><img src="assets/quagsire/card-22.webp" alt="Quagsire 075/086 Pocket card" loading="lazy"><figcaption>Quagsire 075/086 · Promo-B</figcaption></figure>
+      <figure><img src="assets/quagsire/card-23.webp" alt="Quagsire 037/106 Pocket card" loading="lazy"><figcaption>Quagsire 037/106 · Everyday Wonders</figcaption></figure>
+      <figure><img src="assets/quagsire/card-24.webp" alt="Quagsire 039/234 Pocket card" loading="lazy"><figcaption>Quagsire 039/234 · Pulsing Aura</figcaption></figure>
+      <figure><img src="assets/quagsire/card-25.webp" alt="Quagsire 162/234 Pocket card" loading="lazy"><figcaption>Quagsire 162/234 · Pulsing Aura</figcaption></figure>
+      <figure><img src="assets/quagsire/card-26.webp" alt="Quagsire 052/241 Pocket card" loading="lazy"><figcaption>Quagsire 052/241 · Wisdom of Sea and Sky</figcaption></figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>Image reference and archive source: <a href="https://www.artofpkm.com/pokemon/quagsire">The Art of Pokémon</a>. Pokémon, Quagsire, card artwork, and related materials belong to their respective copyright holders. This independent fan gallery is not affiliated with or endorsed by Nintendo, Creatures, GAME FREAK, or The Pokémon Company.</p>
+  </footer>
+</body>
+</html>
