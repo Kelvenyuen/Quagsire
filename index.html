@@ -88,7 +88,9 @@
     .hero-art {
       position: relative;
       z-index: 1;
-      width: min(100%, 360px);
+      width: clamp(280px, 32vw, 420px);
+      max-width: 100%;
+      height: auto;
       margin-inline: auto;
       filter: drop-shadow(0 1.25rem 1rem rgba(26, 84, 109, .2));
       animation: float 5s ease-in-out infinite;
@@ -111,6 +113,8 @@
       gap: 1rem;
       margin-bottom: 1.25rem;
     }
+
+    .gallery-block + .gallery-block { margin-top: 4rem; }
 
     h2 {
       margin: 0;
@@ -181,7 +185,7 @@
     @media (max-width: 700px) {
       .hero { grid-template-columns: 1fr; text-align: center; }
       .intro { margin-inline: auto; }
-      .hero-art { width: min(70%, 280px); grid-row: 1; }
+      .hero-art { width: min(88%, 360px); grid-row: 1; }
       .section-head { align-items: start; flex-direction: column; }
     }
 
@@ -195,20 +199,21 @@
 <body>
   <header class="hero">
     <div>
-      <p class="eyebrow">No. 0195 · Water Fish Pokémon</p>
+      <p class="eyebrow">No. 0195 · Water Pokémon</p>
       <h1>Quagsire</h1>
       <p class="intro">A quiet little archive for the happiest face in the marsh—one official portrait and twenty-six cards from across the years.</p>
     </div>
-    <img class="hero-art" src="assets/quagsire/quagsire-official.webp" alt="Official artwork of Quagsire" width="200" height="200">
+    <img class="hero-art" src="assets/quagsire/quagsire-official.webp" alt="Official artwork of Quagsire" width="475" height="475">
   </header>
 
   <main>
-    <div class="section-head">
-      <h2>Card gallery</h2>
-      <p class="count">26 cards · TCG + Pocket</p>
-    </div>
+    <section class="gallery-block" aria-labelledby="tcg-heading">
+      <div class="section-head">
+        <h2 id="tcg-heading">Pokémon TCG</h2>
+        <p class="count">21 cards</p>
+      </div>
 
-    <section class="gallery" aria-label="Quagsire card gallery">
+      <div class="gallery">
       <figure><img src="assets/quagsire/card-01.webp" alt="Quagsire 122/SV-P card" loading="lazy"><figcaption>Quagsire 122/SV-P · Scarlet &amp; Violet Promos</figcaption></figure>
       <figure><img src="assets/quagsire/card-02.webp" alt="Quagsire V 311/S-P card" loading="lazy"><figcaption>Quagsire V 311/S-P · Sword &amp; Shield Promos</figcaption></figure>
       <figure><img src="assets/quagsire/card-03.webp" alt="Quagsire 035/076 card" loading="lazy"><figcaption>Quagsire 035/076 · Legendary Heartbeat</figcaption></figure>
@@ -230,11 +235,22 @@
       <figure><img src="assets/quagsire/card-19.webp" alt="Misty's Quagsire 058/141 card" loading="lazy"><figcaption>Misty’s Quagsire 058/141 · Pokémon Card ★ VS</figcaption></figure>
       <figure><img src="assets/quagsire/card-20.webp" alt="Quagsire Awakening Legends card" loading="lazy"><figcaption>Quagsire · Awakening Legends</figcaption></figure>
       <figure><img src="assets/quagsire/card-21.webp" alt="Quagsire Gold Silver to a New World card" loading="lazy"><figcaption>Quagsire · Gold, Silver, to a New World…</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="gallery-block" aria-labelledby="pocket-heading">
+      <div class="section-head">
+        <h2 id="pocket-heading">Pokémon TCG Pocket</h2>
+        <p class="count">5 cards</p>
+      </div>
+
+      <div class="gallery">
       <figure><img src="assets/quagsire/card-22.webp" alt="Quagsire 075/086 Pocket card" loading="lazy"><figcaption>Quagsire 075/086 · Promo-B</figcaption></figure>
       <figure><img src="assets/quagsire/card-23.webp" alt="Quagsire 037/106 Pocket card" loading="lazy"><figcaption>Quagsire 037/106 · Everyday Wonders</figcaption></figure>
       <figure><img src="assets/quagsire/card-24.webp" alt="Quagsire 039/234 Pocket card" loading="lazy"><figcaption>Quagsire 039/234 · Pulsing Aura</figcaption></figure>
       <figure><img src="assets/quagsire/card-25.webp" alt="Quagsire 162/234 Pocket card" loading="lazy"><figcaption>Quagsire 162/234 · Pulsing Aura</figcaption></figure>
       <figure><img src="assets/quagsire/card-26.webp" alt="Quagsire 052/241 Pocket card" loading="lazy"><figcaption>Quagsire 052/241 · Wisdom of Sea and Sky</figcaption></figure>
+      </div>
     </section>
   </main>
 
