@@ -55,10 +55,17 @@ function fitMapToTrail() {
   map.fitBounds(mapBounds, {padding:32, duration:500});
 }
 
+function setSelectedMarker(lid) {
+  for (const [markerLid,entry] of markers) {
+    entry.element.classList.toggle('is-selected', markerLid === lid);
+  }
+}
+
 function focusMapOnLid(lid) {
   map.easeTo({center:[lid.lng,lid.lat], zoom:14, duration:500});
   const entry = markers.get(lid);
   if (entry) {
+    setSelectedMarker(lid);
     if (activePopup) activePopup.remove();
     activePopup = entry.popup.addTo(map);
   }
@@ -83,7 +90,7 @@ map.on('load', () => {
       .setLngLat([lid.lng,lid.lat])
       .addTo(map);
     element.addEventListener('click', () => selectLid(lid));
-    markers.set(lid, {marker,popup});
+    markers.set(lid, {marker,popup,element});
   }
   if (selected) focusMapOnLid(selected);
   else fitMapToTrail();
@@ -137,6 +144,7 @@ function selectLid(lid) {
 function showOverview() {
   selected = null;
   if (mapReady) {
+    setSelectedMarker(null);
     if (activePopup) activePopup.remove();
     activePopup = null;
     fitMapToTrail();
