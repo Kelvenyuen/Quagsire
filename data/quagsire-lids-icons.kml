@@ -5,7 +5,7 @@
     <description>Nineteen Quagsire Poké Lids in Kōchi and Kagawa. Coordinates and artwork links from Pokémon Local Acts.</description>
     <Style id="lid-1">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/46149907aafef8ebbb532d3adedfc0a6_l.png</href>
         </Icon>
@@ -23,7 +23,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/97/?is_modal=1</desc
     </Placemark>
     <Style id="lid-2">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/05938aa1104a2226b71dbc2b1e6de194_l.png</href>
         </Icon>
@@ -41,7 +41,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/392/?is_modal=1</des
     </Placemark>
     <Style id="lid-3">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/9c0a595989dd526afbd07bf111d7a2d3_l.png</href>
         </Icon>
@@ -59,7 +59,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/452/?is_modal=1</des
     </Placemark>
     <Style id="lid-4">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/9b80e14141a8c41fc519beaa1bde69f8_l.png</href>
         </Icon>
@@ -77,7 +77,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/390/?is_modal=1</des
     </Placemark>
     <Style id="lid-5">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/299ea9629aaed7f41bf1554d2a09b05a_l.png</href>
         </Icon>
@@ -95,7 +95,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/437/?is_modal=1</des
     </Placemark>
     <Style id="lid-6">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/d9bd03a57b3501b93226b157abadbb2d_l.png</href>
         </Icon>
@@ -113,7 +113,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/432/?is_modal=1</des
     </Placemark>
     <Style id="lid-7">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/9326f1ab7b66840ba918c10e7c8478b2_l.png</href>
         </Icon>
@@ -131,7 +131,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/391/?is_modal=1</des
     </Placemark>
     <Style id="lid-8">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/902cc23866cd95b207c0938bbefff0dd_l.png</href>
         </Icon>
@@ -149,7 +149,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/451/?is_modal=1</des
     </Placemark>
     <Style id="lid-9">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/551bad185b3f9a9d17c5f6f40d7febfc_l.png</href>
         </Icon>
@@ -167,7 +167,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/433/?is_modal=1</des
     </Placemark>
     <Style id="lid-10">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/c1359eed647d0b370136b487d0854b70_l.png</href>
         </Icon>
@@ -185,7 +185,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/436/?is_modal=1</des
     </Placemark>
     <Style id="lid-11">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/c788095c5594cd56004ce5193f87f011_l.png</href>
         </Icon>
@@ -203,7 +203,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/449/?is_modal=1</des
     </Placemark>
     <Style id="lid-12">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/4ac408636042cae5deaff75207b9bf30_l.png</href>
         </Icon>
@@ -221,7 +221,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/393/?is_modal=1</des
     </Placemark>
     <Style id="lid-13">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/b616658313fb3050e2608e53805bbe69_l.png</href>
         </Icon>
@@ -239,7 +239,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/453/?is_modal=1</des
     </Placemark>
     <Style id="lid-14">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/7fc86d8a52fce05b93042fe1a127342a_l.png</href>
         </Icon>
@@ -257,7 +257,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/394/?is_modal=1</des
     </Placemark>
     <Style id="lid-15">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/c4bd71337c16e241b3b9203a89f970e8_l.png</href>
         </Icon>
@@ -275,7 +275,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/434/?is_modal=1</des
     </Placemark>
     <Style id="lid-16">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/207a12127b5a99f94f0fa04d69543a4a_l.png</href>
         </Icon>
@@ -293,7 +293,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/396/?is_modal=1</des
     </Placemark>
     <Style id="lid-17">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/d0827223105f6648da72d7595907c786_l.png</href>
         </Icon>
@@ -311,7 +311,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/435/?is_modal=1</des
     </Placemark>
     <Style id="lid-18">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/31ea84ec8f10061d987ef8d7fc15c1da_l.png</href>
         </Icon>
@@ -329,7 +329,7 @@ Official lid page: https://local.pokemon.jp/en/manhole/desc/395/?is_modal=1</des
     </Placemark>
     <Style id="lid-19">
       <IconStyle>
-        <scale>0.12</scale>
+        <scale>1</scale>
         <Icon>
           <href>https://local.pokemon.jp/img/p/manhole/3ab25d9876c61cc403ff6fd8bb3987c8_l.png</href>
         </Icon>

@@ -24,12 +24,12 @@ const lids = [
 
 const imageUrl = lid => `https://local.pokemon.jp/img/p/manhole/${lid.image}_l.png`;
 const sourceUrl = lid => `https://local.pokemon.jp/en/manhole/desc/${lid.page}/?is_modal=1`;
-const placeUrl = lid => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${lid.lat},${lid.lng}`)}`;
 const coordinates = lid => `${lid.lat},${lid.lng}`;
-const overviewId = '1vFhuouiMc7A9emfC47ubvwCRfH1UN_0';
+const overviewId = '1fMK1to6Zo9AwJS7-wzFM5aTQvJJMiLk';
 const overviewEmbedUrl = `https://www.google.com/maps/d/embed?mid=${overviewId}&ehbc=2E312F`;
 const overviewUrl = `https://www.google.com/maps/d/viewer?mid=${overviewId}`;
-const embedPlaceUrl = lid => `https://www.google.com/maps?q=${coordinates(lid)}&language=en&z=15&output=embed`;
+const placeUrl = lid => `${overviewUrl}&ll=${encodeURIComponent(coordinates(lid))}&z=15`;
+const embedPlaceUrl = lid => `${overviewEmbedUrl}&ll=${encodeURIComponent(coordinates(lid))}&z=15`;
 const search = document.getElementById('lid-search');
 const list = document.getElementById('lid-list');
 const resultCount = document.getElementById('result-count');
@@ -65,8 +65,8 @@ function renderList(preserveScroll = false) {
 function renderSelected() {
   if (!selected) {
     selectedCard.innerHTML = `<img src="assets/quagsire/quagsire-official.webp" alt="Quagsire official artwork">
-      <div class="selected-copy"><span class="selected-overline">GOOGLE MY MAPS · KŌCHI</span>
-        <h3>Kōchi overview</h3><p>18 Kōchi lids. Select a lid to focus its location; Utazu is in Kagawa.</p>
+      <div class="selected-copy"><span class="selected-overline">GOOGLE MY MAPS · SHIKOKU</span>
+        <h3>The full collection</h3><p>19 Quagsire lids across Kōchi and Kagawa, each marked with its own artwork. Select a lid to explore.</p>
         <div class="selected-actions"><a href="${overviewUrl}" target="_blank" rel="noopener noreferrer">Open Google map ↗</a></div>
       </div>`;
     return;
@@ -74,7 +74,7 @@ function renderSelected() {
   selectedCard.innerHTML = `<img src="${imageUrl(selected)}" alt="${selected.name} Poké Lid artwork">
     <div class="selected-copy"><span class="selected-overline">LID ${String(lids.indexOf(selected)+1).padStart(2,'0')} / 19 · ${selected.prefecture.toUpperCase()}</span>
       <h3>${selected.name}</h3><p>Quagsire is waiting here.</p>
-      <div class="selected-actions"><a href="${placeUrl(selected)}" target="_blank" rel="noopener noreferrer">Google Maps ↗</a><a href="${sourceUrl(selected)}" target="_blank" rel="noopener noreferrer">Lid details ↗</a></div>
+      <div class="selected-actions"><a href="${placeUrl(selected)}" target="_blank" rel="noopener noreferrer">Open map ↗</a><a href="${sourceUrl(selected)}" target="_blank" rel="noopener noreferrer">Lid details ↗</a></div>
     </div>`;
 }
 
@@ -90,7 +90,7 @@ function selectLid(lid) {
 function showOverview() {
   selected = null;
   if (mapFrame.src !== overviewEmbedUrl) mapFrame.src = overviewEmbedUrl;
-  mapFrame.title = 'Google My Maps overview of Quagsire Poké Lids in Kōchi';
+  mapFrame.title = 'Google My Maps overview of 19 Quagsire Poké Lids in Kōchi and Kagawa';
   renderSelected();
   renderList(true);
 }
