@@ -6,7 +6,9 @@
   <meta name="description" content="Explore all 19 Quagsire Poké Lids across Shikoku, with artwork, exact locations, and Google Maps driving directions.">
   <title>Quagsire Lid Trail · Explore Shikoku</title>
   <link rel="preconnect" href="https://local.pokemon.jp">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
   <link rel="stylesheet" href="lids.css">
+  <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js" defer></script>
   <script src="lids.js" defer></script>
 </head>
 <body>
@@ -68,12 +70,12 @@
         <div class="map-column">
           <div class="map-topline"><span class="map-kicker"><span class="live-dot"></span> 19 LID LOCATIONS</span><button id="fit-map" class="map-tool" type="button" title="Show all 19 lids" aria-label="Show all 19 lids">⌗ <span>Overview</span></button></div>
           <div class="map-wrap">
-            <iframe id="map" class="map" title="Google My Maps overview of 19 Quagsire Poké Lids in Kōchi and Kagawa" src="https://www.google.com/maps/d/embed?mid=1fMK1to6Zo9AwJS7-wzFM5aTQvJJMiLk&amp;ehbc=2E312F" allowfullscreen></iframe>
+            <div id="map" class="map" role="application" aria-label="Interactive map of 19 Quagsire Poké Lids in Kōchi and Kagawa"></div>
           </div>
           <article id="selected-card" class="selected-card" aria-live="polite"></article>
         </div>
       </div>
-      <p class="map-note">This Google map pairs all 19 Quagsire lids with their exact locations. Select a lid to focus its artwork marker, or open a route leg below for driving directions.</p>
+      <p class="map-note">Select a lid to focus its artwork marker. Map data © OpenMapTiles · OpenStreetMap contributors.</p>
     </section>
 
     <section id="route" class="route-section" aria-labelledby="route-title">
@@ -88,7 +90,7 @@
 
   <footer class="site-footer">
     <div><strong>Keep wandering, keep smiling.</strong><span>An independent Quagsire fan project.</span></div>
-    <p>Lid artwork and coordinates: <a href="https://local.pokemon.jp/en/manhole/kochi.html" target="_blank" rel="noopener noreferrer">Pokémon Local Acts</a>. Quagsire art belongs to its respective owners. Custom map hosted by Google My Maps. This site is not affiliated with or endorsed by The Pokémon Company.</p>
+    <p>Lid artwork and coordinates: <a href="https://local.pokemon.jp/en/manhole/kochi.html" target="_blank" rel="noopener noreferrer">Pokémon Local Acts</a>. Map data © <a href="https://openmaptiles.org/" target="_blank" rel="noopener noreferrer">OpenMapTiles</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>. Quagsire art belongs to its respective owners. This site is not affiliated with or endorsed by The Pokémon Company.</p>
   </footer>
 </body>
 </html>
