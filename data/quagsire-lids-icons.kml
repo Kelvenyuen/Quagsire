@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Quagsire Poké Lid Trail</name>
+    <description>Nineteen Quagsire Poké Lids in Kōchi and Kagawa. Coordinates and artwork links from Pokémon Local Acts.</description>
+    <Style id="lid-1">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/46149907aafef8ebbb532d3adedfc0a6_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Utazu · Quagsire Poké Lid</name>
+      <description>Kagawa Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/46149907aafef8ebbb532d3adedfc0a6_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/97/?is_modal=1</description>
+      <styleUrl>#lid-1</styleUrl>
+      <Point>
+        <coordinates>133.8075257,34.3134259,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-2">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/05938aa1104a2226b71dbc2b1e6de194_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Otoyo · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/05938aa1104a2226b71dbc2b1e6de194_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/392/?is_modal=1</description>
+      <styleUrl>#lid-2</styleUrl>
+      <Point>
+        <coordinates>133.684166,33.749067,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-3">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/9c0a595989dd526afbd07bf111d7a2d3_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Motoyama · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/9c0a595989dd526afbd07bf111d7a2d3_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/452/?is_modal=1</description>
+      <styleUrl>#lid-3</styleUrl>
+      <Point>
+        <coordinates>133.59448,33.75877,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-4">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/9b80e14141a8c41fc519beaa1bde69f8_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Kami · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/9b80e14141a8c41fc519beaa1bde69f8_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/390/?is_modal=1</description>
+      <styleUrl>#lid-4</styleUrl>
+      <Point>
+        <coordinates>133.874784,33.695608,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-5">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/299ea9629aaed7f41bf1554d2a09b05a_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Toyo · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/299ea9629aaed7f41bf1554d2a09b05a_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/437/?is_modal=1</description>
+      <styleUrl>#lid-5</styleUrl>
+      <Point>
+        <coordinates>134.29495896722574,33.54316884,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-6">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/d9bd03a57b3501b93226b157abadbb2d_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Muroto · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/d9bd03a57b3501b93226b157abadbb2d_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/432/?is_modal=1</description>
+      <styleUrl>#lid-6</styleUrl>
+      <Point>
+        <coordinates>134.195181,33.325698,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-7">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/9326f1ab7b66840ba918c10e7c8478b2_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Nahari · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/9326f1ab7b66840ba918c10e7c8478b2_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/391/?is_modal=1</description>
+      <styleUrl>#lid-7</styleUrl>
+      <Point>
+        <coordinates>134.017781,33.425249,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-8">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/902cc23866cd95b207c0938bbefff0dd_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Yasuda · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/902cc23866cd95b207c0938bbefff0dd_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/451/?is_modal=1</description>
+      <styleUrl>#lid-8</styleUrl>
+      <Point>
+        <coordinates>133.99983,33.47986,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-9">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/551bad185b3f9a9d17c5f6f40d7febfc_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Aki · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/551bad185b3f9a9d17c5f6f40d7febfc_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/433/?is_modal=1</description>
+      <styleUrl>#lid-9</styleUrl>
+      <Point>
+        <coordinates>133.9065445,33.5043207,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-10">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/c1359eed647d0b370136b487d0854b70_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Konan · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/c1359eed647d0b370136b487d0854b70_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/436/?is_modal=1</description>
+      <styleUrl>#lid-10</styleUrl>
+      <Point>
+        <coordinates>133.75346,33.534367,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-11">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/c788095c5594cd56004ce5193f87f011_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Kochi · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/c788095c5594cd56004ce5193f87f011_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/449/?is_modal=1</description>
+      <styleUrl>#lid-11</styleUrl>
+      <Point>
+        <coordinates>133.5431367,33.56701662,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-12">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/4ac408636042cae5deaff75207b9bf30_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Hidaka · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/4ac408636042cae5deaff75207b9bf30_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/393/?is_modal=1</description>
+      <styleUrl>#lid-12</styleUrl>
+      <Point>
+        <coordinates>133.3712561,33.5335561,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-13">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/b616658313fb3050e2608e53805bbe69_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Niyodogawa · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/b616658313fb3050e2608e53805bbe69_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/453/?is_modal=1</description>
+      <styleUrl>#lid-13</styleUrl>
+      <Point>
+        <coordinates>133.129433,33.561104,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-14">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/7fc86d8a52fce05b93042fe1a127342a_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Tsuno · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/7fc86d8a52fce05b93042fe1a127342a_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/394/?is_modal=1</description>
+      <styleUrl>#lid-14</styleUrl>
+      <Point>
+        <coordinates>133.004184,33.476856,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-15">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/c4bd71337c16e241b3b9203a89f970e8_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Susaki · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/c4bd71337c16e241b3b9203a89f970e8_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/434/?is_modal=1</description>
+      <styleUrl>#lid-15</styleUrl>
+      <Point>
+        <coordinates>133.2926446,33.39238098,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-16">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/207a12127b5a99f94f0fa04d69543a4a_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Mihara · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/207a12127b5a99f94f0fa04d69543a4a_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/396/?is_modal=1</description>
+      <styleUrl>#lid-16</styleUrl>
+      <Point>
+        <coordinates>132.83982,32.922536,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-17">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/d0827223105f6648da72d7595907c786_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Sukumo · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/d0827223105f6648da72d7595907c786_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/435/?is_modal=1</description>
+      <styleUrl>#lid-17</styleUrl>
+      <Point>
+        <coordinates>132.712575,32.915754,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-18">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/31ea84ec8f10061d987ef8d7fc15c1da_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Otsuki · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/31ea84ec8f10061d987ef8d7fc15c1da_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/395/?is_modal=1</description>
+      <styleUrl>#lid-18</styleUrl>
+      <Point>
+        <coordinates>132.627259,32.767739,0</coordinates>
+      </Point>
+    </Placemark>
+    <Style id="lid-19">
+      <IconStyle>
+        <scale>0.12</scale>
+        <Icon>
+          <href>https://local.pokemon.jp/img/p/manhole/3ab25d9876c61cc403ff6fd8bb3987c8_l.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Tosashimizu · Quagsire Poké Lid</name>
+      <description>Kōchi Prefecture
+Artwork: https://local.pokemon.jp/img/p/manhole/3ab25d9876c61cc403ff6fd8bb3987c8_l.png
+Official lid page: https://local.pokemon.jp/en/manhole/desc/450/?is_modal=1</description>
+      <styleUrl>#lid-19</styleUrl>
+      <Point>
+        <coordinates>132.862367,32.791142,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
