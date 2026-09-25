@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore all 19 Quagsire Poké Lids across Shikoku, with artwork, exact locations, and Google Maps driving directions.">
+  <title>Quagsire Lid Trail · Explore Shikoku</title>
+  <link rel="preconnect" href="https://local.pokemon.jp">
+  <link rel="stylesheet" href="lids.css">
+  <script src="lids.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Quagsire Gallery home">
+      <span class="brand-mark" aria-hidden="true">Q<span class="brand-dot"></span></span>
+      <span>QUAG<span class="brand-light">TRAIL</span><small>THE POKÉ LID FIELD GUIDE</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="nav-link" href="index.html">The gallery</a>
+      <a class="nav-link active" href="lids.html" aria-current="page">Explore lids</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="kicker"><span class="kicker-dot"></span> AN INVITATION TO WANDER · SHIKOKU, JAPAN</p>
+        <h1 id="page-title">A little trail of <em>big smiles.</em></h1>
+        <p class="intro-text">Find every Poké Lid featuring Quagsire, from Kagawa’s northern shore to the far corners of Kōchi. Pick a lid, admire the art, and follow the trail.</p>
+        <div class="intro-actions">
+          <a class="primary-link" href="#explore">Explore the map <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#route">Plan the journey <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="intro-art" aria-hidden="true">
+        <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+        <div class="quagsire-glow"></div>
+        <img src="assets/quagsire/quagsire-official.webp" alt="" width="475" height="475">
+        <span class="art-note">NO. 0195 <b>✦</b> YOUR TRAVEL COMPANION</span>
+      </div>
+      <div class="intro-stats" aria-label="Trail overview">
+        <div><strong>19</strong><span>unique lids</span></div>
+        <div><strong>2</strong><span>prefectures</span></div>
+        <div><strong>∞</strong><span>reasons to smile</span></div>
+      </div>
+    </section>
+
+    <section id="explore" class="explore-section" aria-labelledby="explore-title">
+      <div class="section-heading">
+        <div><p class="section-label">01 / THE COLLECTION</p><h2 id="explore-title">Explore the lids<span class="heading-spark">✳</span></h2></div>
+        <p>Each lid has its own little corner of the world.</p>
+      </div>
+
+      <div class="explorer">
+        <aside class="lid-panel" aria-label="Poké Lid collection">
+          <div class="panel-head">
+            <div class="panel-title"><span class="mini-pokeball" aria-hidden="true"></span><div><strong>Field guide</strong><span id="result-count">19 places to discover</span></div></div>
+            <label class="search-wrap"><span class="sr-only">Search lids by place</span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="lid-search" type="search" placeholder="Find a town or lid…" autocomplete="off"></label>
+            <div class="filters" role="group" aria-label="Filter by prefecture">
+              <button class="filter active" type="button" data-filter="all" aria-pressed="true">All <span>19</span></button>
+              <button class="filter" type="button" data-filter="Kōchi" aria-pressed="false">Kōchi <span>18</span></button>
+              <button class="filter" type="button" data-filter="Kagawa" aria-pressed="false">Kagawa <span>1</span></button>
+            </div>
+          </div>
+          <div id="lid-list" class="lid-list" aria-live="polite"></div>
+        </aside>
+
+        <div class="map-wrap">
+          <iframe id="map" class="map" title="Google My Maps overview of Quagsire Poké Lids in Kōchi" src="https://www.google.com/maps/d/embed?mid=1vFhuouiMc7A9emfC47ubvwCRfH1UN_0&amp;ehbc=2E312F" allowfullscreen></iframe>
+          <div class="map-topline"><span class="map-kicker"><span class="live-dot"></span> GOOGLE MAPS EXPLORER</span><button id="fit-map" class="map-tool" type="button" title="Show the Kōchi overview" aria-label="Show the Kōchi overview">⌗ <span>Overview</span></button></div>
+          <div class="map-key"><span class="key-pin"></span> Select a lid to see its exact location</div>
+          <article id="selected-card" class="selected-card" aria-live="polite"></article>
+        </div>
+      </div>
+      <p class="map-note">The overview is Pokémon Local Acts’ Kōchi map. Select any lid, including Utazu in Kagawa, to focus its exact Google Maps location.</p>
+    </section>
+
+    <section id="route" class="route-section" aria-labelledby="route-title">
+      <div class="section-heading route-heading">
+        <div><p class="section-label">02 / HIT THE ROAD</p><h2 id="route-title">Follow the happy trail<span class="heading-spark">↗</span></h2></div>
+        <p>A suggested journey from Utazu to the Pacific coast. Each leg opens with driving directions in Google Maps.</p>
+      </div>
+      <div class="route-banner"><div class="route-banner-icon" aria-hidden="true">↗</div><p><strong>Made for the road.</strong> The five short legs work on mobile and desktop. Your starting point is Utazu; open any leg when you’re ready to go.</p></div>
+      <div id="route-legs" class="route-legs"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>Keep wandering, keep smiling.</strong><span>An independent Quagsire fan project.</span></div>
+    <p>Lid artwork, coordinates, and Kōchi map: <a href="https://local.pokemon.jp/en/manhole/kochi.html" target="_blank" rel="noopener noreferrer">Pokémon Local Acts</a>. Quagsire art belongs to its respective owners. Map by Google. This site is not affiliated with or endorsed by The Pokémon Company.</p>
+  </footer>
+</body>
+</html>
