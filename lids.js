@@ -57,9 +57,13 @@ function fitMapToTrail() {
 
 function setSelectedMarker(lid) {
   for (const [markerLid,entry] of markers) {
-    entry.element.classList.toggle('is-selected', markerLid === lid);
+    const isSelected = markerLid === lid;
+    entry.element.classList.toggle('is-selected', isSelected);
+    entry.element.classList.toggle('zoomed-in', isSelected && map.getZoom() >= 12);
   }
 }
+
+map.on('zoom', () => setSelectedMarker(selected));
 
 function focusMapOnLid(lid) {
   map.easeTo({center:[lid.lng,lid.lat], zoom:14, duration:500});
