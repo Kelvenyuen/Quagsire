@@ -25,20 +25,69 @@ const lids = [
 const imageUrl = lid => `https://local.pokemon.jp/img/p/manhole/${lid.image}_l.png`;
 const sourceUrl = lid => `https://local.pokemon.jp/en/manhole/desc/${lid.page}/?is_modal=1`;
 const coordinates = lid => `${lid.lat},${lid.lng}`;
-const overviewId = '1fMK1to6Zo9AwJS7-wzFM5aTQvJJMiLk';
-const overviewEmbedUrl = `https://www.google.com/maps/d/embed?mid=${overviewId}&ehbc=2E312F`;
-const overviewUrl = `https://www.google.com/maps/d/viewer?mid=${overviewId}`;
-const placeUrl = lid => `${overviewUrl}&ll=${encodeURIComponent(coordinates(lid))}&z=15`;
-const embedPlaceUrl = lid => `${overviewEmbedUrl}&ll=${encodeURIComponent(coordinates(lid))}&z=15`;
+const placeUrl = lid => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coordinates(lid))}`;
 const search = document.getElementById('lid-search');
 const list = document.getElementById('lid-list');
 const resultCount = document.getElementById('result-count');
 const selectedCard = document.getElementById('selected-card');
 const routeLegs = document.getElementById('route-legs');
-const mapFrame = document.getElementById('map');
+const mapContainer = document.getElementById('map');
 const filters = [...document.querySelectorAll('.filter')];
 let currentFilter = 'all';
 let selected = null;
+const map = new maplibregl.Map({
+  container:mapContainer,
+  style:'https://tiles.openfreemap.org/styles/liberty',
+  center:[133.45,33.4],
+  zoom:7.5,
+  attributionControl:true
+});
+map.addControl(new maplibregl.NavigationControl({showZoom:true, showCompass:false}), 'top-right');
+const markers = new Map();
+let mapReady = false;
+let activePopup = null;
+const mapBounds = [
+  [Math.min(...lids.map(lid => lid.lng)),Math.min(...lids.map(lid => lid.lat))],
+  [Math.max(...lids.map(lid => lid.lng)),Math.max(...lids.map(lid => lid.lat))]
+];
+
+function fitMapToTrail() {
+  map.fitBounds(mapBounds, {padding:32, duration:500});
+}
+
+function focusMapOnLid(lid) {
+  map.easeTo({center:[lid.lng,lid.lat], zoom:14, duration:500});
+  const entry = markers.get(lid);
+  if (entry) {
+    if (activePopup) activePopup.remove();
+    activePopup = entry.popup.addTo(map);
+  }
+}
+
+map.on('load', () => {
+  mapReady = true;
+  for (const lid of lids) {
+    const element = document.createElement('button');
+    element.type = 'button';
+    element.className = 'lid-map-icon';
+    element.setAttribute('aria-label', `${lid.name} Poké Lid`);
+    const image = document.createElement('img');
+    image.src = imageUrl(lid);
+    image.alt = '';
+    element.append(image);
+
+    const popup = new maplibregl.Popup({offset:25, closeButton:true})
+      .setHTML(`<strong>${lid.name}</strong><br>${lid.prefecture} Prefecture · Quagsire<br><a href="${placeUrl(lid)}" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>`);
+    popup.on('close', () => {if (activePopup === popup) activePopup = null;});
+    const marker = new maplibregl.Marker({element, anchor:'center'})
+      .setLngLat([lid.lng,lid.lat])
+      .addTo(map);
+    element.addEventListener('click', () => selectLid(lid));
+    markers.set(lid, {marker,popup});
+  }
+  if (selected) focusMapOnLid(selected);
+  else fitMapToTrail();
+});
 
 function visibleLids() {
   const query = search.value.trim().toLocaleLowerCase();
@@ -65,9 +114,8 @@ function renderList(preserveScroll = false) {
 function renderSelected() {
   if (!selected) {
     selectedCard.innerHTML = `<img src="assets/quagsire/quagsire-official.webp" alt="Quagsire official artwork">
-      <div class="selected-copy"><span class="selected-overline">GOOGLE MY MAPS · SHIKOKU</span>
+      <div class="selected-copy"><span class="selected-overline">THE FULL TRAIL · SHIKOKU</span>
         <h3>The full collection</h3><p>19 Quagsire lids across Kōchi and Kagawa, each marked with its own artwork. Select a lid to explore.</p>
-        <div class="selected-actions"><a href="${overviewUrl}" target="_blank" rel="noopener noreferrer">Open Google map ↗</a></div>
       </div>`;
     return;
   }
@@ -81,16 +129,18 @@ function renderSelected() {
 function selectLid(lid) {
   if (!lid) return;
   selected = lid;
-  mapFrame.src = embedPlaceUrl(lid);
-  mapFrame.title = `Google map of the ${lid.name} Poké Lid in ${lid.prefecture}`;
+  if (mapReady) focusMapOnLid(lid);
   renderSelected();
   renderList(true);
 }
 
 function showOverview() {
   selected = null;
-  if (mapFrame.src !== overviewEmbedUrl) mapFrame.src = overviewEmbedUrl;
-  mapFrame.title = 'Google My Maps overview of 19 Quagsire Poké Lids in Kōchi and Kagawa';
+  if (mapReady) {
+    if (activePopup) activePopup.remove();
+    activePopup = null;
+    fitMapToTrail();
+  }
   renderSelected();
   renderList(true);
 }
